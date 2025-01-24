@@ -123,6 +123,7 @@ import { thirdwebPlugin } from "@elizaos/plugin-thirdweb"
 import { tonPlugin } from "@elizaos/plugin-ton"
 import { udioPlugin } from "@elizaos/plugin-udio"
 import { webSearchPlugin } from "@elizaos/plugin-web-search"
+import { zerionPlugin } from "@elizaos/plugin-zerion"
 import { zksyncEraPlugin } from "@elizaos/plugin-zksync-era"
 import Database from "better-sqlite3"
 import fs from "fs"
@@ -762,6 +763,7 @@ export async function createAgent(character: Character, db: IDatabaseAdapter, ca
 				: null,
 			getSecret(character, "ZEROG_PRIVATE_KEY") ? zgPlugin : null,
 			getSecret(character, "COINMARKETCAP_API_KEY") ? coinmarketcapPlugin : null,
+			getSecret(character, "ZERION_API_KEY") ? zerionPlugin : null,
 			getSecret(character, "COINBASE_COMMERCE_KEY") ? coinbaseCommercePlugin : null,
 			getSecret(character, "FAL_API_KEY") ||
 			getSecret(character, "OPENAI_API_KEY") ||
