@@ -1001,6 +1001,7 @@ export async function createAgent(
             getSecret(character, "COINMARKETCAP_API_KEY")
                 ? coinmarketcapPlugin
                 : null,
+            getSecret(character, "ZERION_API_KEY") ? zerionPlugin : null,
             getSecret(character, "COINBASE_COMMERCE_KEY")
                 ? coinbaseCommercePlugin
                 : null,
